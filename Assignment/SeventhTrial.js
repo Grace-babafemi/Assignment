@@ -60,16 +60,13 @@ res.status(200).json({Message: "CHECKING FOR STATUS", data: getStatus})
 app.get("/:dueDate", (req, res) => {
     let {dueDate} = req.params;
     const getDueDate = seven.filter((e) => e.dueDate === dueDate)
-    res.status(200).json({Message: "ALL ITEMS DELETED!", data: getDueDate});
+    res.status(200).json({Message: "CHECKING DUE DATE", data: getDueDate});
 });
 
 app.delete("/", (req, res) => {
     seven = [];
-    res.status(200).json({Message: ""})
-})
-
-
-
+    res.status(200).json({Message: "ALL ITEMS DELETED!"});
+});
 
 
 
